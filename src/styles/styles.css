@@ -1,3 +1,18 @@
 .logo {
-    filter: invert(1);
+  filter: invert(1);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+}
+
+/* Tailwind-friendly: override the inline border animation */
+.motion-caret-blink {
+  animation: blink 19s step-start infinite;
 }
